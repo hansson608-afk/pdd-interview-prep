@@ -9,7 +9,7 @@
   :root{
     --bg:#f6f5f3; --card:#ffffff; --ink:#1f2328; --sub:#6a7078;
     --line:#e7e3df; --accent:#d84339; --accent-soft:#fdeeed;
-    --ok:#1a7f4b; --ok-soft:#e8f5ee;
+    --ok:#1a7f4b; --ok-soft:#e8f5ee; --blue:#2b6cb0; --blue-soft:#eaf2fb;
   }
   *{box-sizing:border-box}
   html{-webkit-text-size-adjust:100%}
@@ -28,11 +28,11 @@
   .subtitle{font-size:14px; opacity:.92; margin:0}
   .meta{margin-top:12px; display:flex; flex-wrap:wrap; gap:8px}
   .chip{background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.28); border-radius:999px; padding:3px 11px; font-size:12.5px}
-  nav.toc{position:sticky; top:0; z-index:10; background:rgba(246,245,243,.94); backdrop-filter:blur(8px); border-bottom:1px solid var(--line)}
+  nav.toc{position:sticky; top:0; z-index:10; background:rgba(246,245,243,.95); backdrop-filter:blur(8px); border-bottom:1px solid var(--line)}
   nav.toc .wrap{display:flex; flex-wrap:wrap; gap:8px; padding-top:10px; padding-bottom:10px}
   nav.toc a{text-decoration:none; color:var(--ink); background:#fff; border:1px solid var(--line); border-radius:999px; padding:4px 11px; font-size:13px}
   nav.toc a:hover{border-color:var(--accent); color:var(--accent)}
-  section{margin-top:22px}
+  section{margin-top:24px}
   h2{font-size:18px; margin:0 0 12px; padding-left:10px; border-left:4px solid var(--accent); line-height:1.4}
   h3{font-size:15.5px; margin:16px 0 6px; color:var(--accent)}
   .card{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:16px; margin-bottom:12px; box-shadow:0 1px 2px rgba(0,0,0,.03)}
@@ -40,6 +40,7 @@
   .lead b{color:var(--accent)}
   .quote{background:var(--accent-soft); border:1px solid #f4cdc8; border-radius:12px; padding:14px 16px; font-size:15px; margin:0}
   .key{background:var(--ok-soft); border:1px solid #bfe3cd; border-radius:12px; padding:14px 16px; font-size:15px; margin:8px 0 0}
+  .blue{background:var(--blue-soft); border:1px solid #c3d9f0; border-radius:12px; padding:14px 16px; font-size:15px; margin:8px 0 0}
   details{border:1px solid var(--line); border-radius:12px; background:#fff; margin-bottom:10px; overflow:hidden}
   summary{
     list-style:none; cursor:pointer; padding:13px 14px; font-weight:600; font-size:15px;
@@ -55,8 +56,8 @@
   .ans li{margin:4px 0}
   .ans .tag{display:block; font-size:14px; color:var(--ok); background:var(--ok-soft); border-radius:8px; padding:6px 9px; margin-top:8px}
   .ans .warn{color:var(--accent); font-weight:600}
-  table{width:100%; border-collapse:collapse; margin-top:8px; font-size:14px}
-  th,td{border:1px solid var(--line); padding:8px 10px; text-align:left; vertical-align:top}
+  table{width:100%; border-collapse:collapse; margin-top:8px; font-size:13.5px}
+  th,td{border:1px solid var(--line); padding:7px 9px; text-align:left; vertical-align:top}
   th{background:#faf9f7; font-weight:600}
   .backtop{
     position:fixed; right:18px; bottom:18px; width:44px; height:44px; border-radius:50%;
@@ -75,8 +76,8 @@
     <p class="subtitle">贲皓轩 · 线下面试（上海）· 1V1 单面 · 当天可能跑完三轮</p>
     <div class="meta">
       <span class="chip">先结论后细节</span>
-      <span class="chip">STAR + 数据</span>
       <span class="chip">本质是约束下求最优</span>
+      <span class="chip">AARRR × 人货场 × 定调算</span>
     </div>
   </div>
 </header>
@@ -86,6 +87,9 @@
     <a href="#card">作战卡</a>
     <a href="#intro">自我介绍</a>
     <a href="#hooks">三句收口</a>
+    <a href="#biz">商业模型</a>
+    <a href="#think">思维模型</a>
+    <a href="#five">五步排查</a>
     <a href="#dirs">四个方向</a>
     <a href="#map">场景地图</a>
     <a href="#trans">简历翻译</a>
@@ -93,6 +97,7 @@
     <a href="#r1">一面</a>
     <a href="#r2">二面</a>
     <a href="#r3">三面</a>
+    <a href="#kpi">指标表</a>
     <a href="#tips">避坑</a>
     <a href="#jd">京东二面</a>
   </div>
@@ -101,16 +106,17 @@
 <div class="wrap">
 
   <section id="card">
-    <h2>🎯 明天作战卡（一屏看完）</h2>
+    <h2>🎯 作战卡（进场前只看这一块）</h2>
     <div class="card">
       <h3>自我介绍 · 三块</h3>
       <p class="lead"><b>拉新增长</b>（联通带 5 人团队，10 天私域拉新 700+）· <b>活动操盘</b>（苏小配操盘 30+ 场，ROI 100% 达标）· <b>数据经营</b>（美的预测偏差体系）。而且我服务的对象一直是<b>品牌甲方</b>，所以懂 B 端要什么。</p>
       <h3>三句收口（必背）</h3>
       <p class="lead">① <b>定位</b>：我懂商家的成本结构，也能用数据把增长做出来。<br>
-      ② <b>对运营的理解</b>：运营的本质是在约束条件下求产出最优；GMV 不是孤立数字，它分布在事前选品、事中流量、事后履约的每个节点上。<br>
+      ② <b>对运营的理解</b>：运营的本质是在约束条件下求产出最优；GMV 不是孤立数字，它分布在每个节点上。<br>
       ③ <b>对岗位的理解</b>：商家运营是行业操盘手——招商家、帮商家赚钱、淘汰不行的商家。</p>
-      <h3>四个方向</h3>
-      <p class="lead">更倾向招商运营 / 商品运营，但 <b>四个方向我都不是从零开始</b>。</p>
+      <h3>两句话理解这家公司</h3>
+      <p class="lead"><b>商业</b>：拼多多是个流量交易所——用低价聚来买家，再把注意力竞价卖给商家赚广告费。<br>
+      <b>方法</b>：AARRR 定「在哪一段」，人货场定「哪一方」，事前事中事后定「什么时候」。</p>
       <h3>场景题四件套</h3>
       <p class="lead">GMV 拆解（<b>商家数 × 单商家产出</b>）· 用户分层（RFM + 价格敏感度）· 商家不配合（听痛点 → 摆流量和数据 → 低价测试）· 策划活动（目标→人群→货盘→机制→节奏→复盘）</p>
       <h3>意愿（要干脆）</h3>
@@ -137,23 +143,164 @@
   </section>
 
   <section id="hooks">
-    <h2>二、三句收口（背这三句就够）</h2>
+    <h2>二、三句收口</h2>
     <details>
       <summary>① 定位</summary>
       <div class="ans"><p>「我的定位是——<b>既懂商家的成本结构，又能用数据把增长做出来</b>。」</p></div>
     </details>
     <details>
       <summary>② 对运营的理解</summary>
-      <div class="ans"><p>「运营的本质是<b>在资源与规则的约束下求产出最优</b>。我在美的做计划时，约束是产能和 BOM 提前期，产出是准时交付和零浪费；在拼多多做运营，约束是算法规则和价格极限，产出是高转化和 GMV 规模。<b>GMV 从来不是一个孤立的结果，它分布在事前选品、事中流量、事后履约的每个节点上。</b>」</p></div>
+      <div class="ans"><p>「运营的本质是<b>在资源与规则的约束下求产出最优</b>。我在美的做计划时，约束是产能和 BOM 提前期，产出是准时交付和零浪费；在拼多多做运营，约束是算法规则和价格极限，产出是高转化和 GMV 规模。<b>GMV 从来不是孤立的结果，它分布在事前选品、事中流量、事后履约的每个节点上。</b>」</p></div>
     </details>
     <details>
       <summary>③ 对岗位的理解</summary>
-      <div class="ans"><p>「商家运营本质是某个行业在平台上的操盘手——<b>对这个行业的 GMV 和商家广告收入负责</b>。三个抓手是：<b>招商家、帮商家赚钱、淘汰不行的商家。</b>」</p></div>
+      <div class="ans"><p>「商家运营是某个行业在平台上的操盘手——<b>对这个行业的 GMV 和商家广告收入负责</b>。三个抓手是：<b>招商家、帮商家赚钱、淘汰不行的商家。</b>」</p></div>
     </details>
   </section>
 
+  <section id="biz">
+    <h2>三、商业模型：拼多多到底靠什么赚钱</h2>
+
+    <div class="card">
+      <p class="blue"><b>一句话：拼多多本质是一个「流量交易所」——用低价把买家聚过来，再把这波注意力竞价卖给商家，赚广告费。</b>和 Google 靠竞价广告变现的逻辑同构。</p>
+    </div>
+
+    <details>
+      <summary>三方杠杆图（平台 / 商家 / 买家）</summary>
+      <div class="ans">
+        <table>
+          <thead><tr><th>主体</th><th>付出</th><th>得到</th><th>他的算盘</th></tr></thead>
+          <tbody>
+            <tr><td><b>平台</b></td><td>补贴、营销资源、流量位</td><td>广告费（核心）+ 技术服务费 + 资金沉淀</td><td>算 ROI：把有限资源给最能转化的单品</td></tr>
+            <tr><td><b>商家</b></td><td>广告费 + 让出单件毛利（降价）</td><td>订单规模 → 摊薄成本 → 薄利多销</td><td>压供应链成本，才撑得住低价</td></tr>
+            <tr><td><b>买家</b></td><td>注意力 + 复购</td><td>极致性价比</td><td>多快好省</td></tr>
+          </tbody>
+        </table>
+        <p>而<b>运营，就是站在平台这一侧，调这三方的杠杆。</b></p>
+      </div>
+    </details>
+
+    <details>
+      <summary>飞轮：它为什么能越转越快</summary>
+      <div class="ans">
+        <p><b>买家多 → 流量池大 → 商家更愿意投广告 → 商家多、竞价激烈 → 价格更低、供给更全 → 买家更多 → 复购</b></p>
+        <p>这是个正循环。<b>运营的价值就是让这个飞轮转得更快</b>——不是发券，不是上下架，是在飞轮上做调优。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>最深一层：养商家 &gt; 压商家</summary>
+      <div class="ans">
+        <p><b>商家的利润空间越大，平台的广告收入才越可持续。</b></p>
+        <ul>
+          <li>短期看，运营像在「压商家」（要低价、要投放）</li>
+          <li>长期看，运营是在「养商家」（让他赚钱，他才持续投）</li>
+        </ul>
+        <p>拼多多 2024 年推「百亿减免」、2025 年推「千亿扶持」，主动减商家负担，就是这个道理——<b>生态健康是长期变现的前提。</b></p>
+      </div>
+    </details>
+
+    <details>
+      <summary>利润 → 运营板块的对应</summary>
+      <div class="ans">
+        <table>
+          <thead><tr><th>运营板块</th><th>核心职责</th><th>利润驱动</th></tr></thead>
+          <tbody>
+            <tr><td>商家运营 / 商务 BD</td><td>扩容商家生态</td><td>拉高广告竞价底座</td></tr>
+            <tr><td>品类运营</td><td>打造品类爆款</td><td>撬动交易服务费（GMV）</td></tr>
+            <tr><td>活动 / 流量运营</td><td>流量极致配给</td><td>提升全盘 CVR 与流量价值</td></tr>
+            <tr><td>商业化 / 策略运营</td><td>优化变现工具</td><td>直接拉升广告收入</td></tr>
+          </tbody>
+        </table>
+        <p class="warn">一句话：帮商家把 GMV 做上去 → 商家赚到钱 → 他愿意投更多广告 → 平台赚广告费。<b>「帮商家赚钱」和「让商家多投广告」其实是同一件事。</b></p>
+      </div>
+    </details>
+  </section>
+
+  <section id="think">
+    <h2>四、思维模型（分析任何问题都用它）</h2>
+
+    <div class="card">
+      <p class="key"><b>口诀：AARRR 定「在哪一段」，人货场定「哪一方」，事前事中事后定「什么时候」。</b><br>
+      三个维度各问各的，<b>不是三层嵌套</b>（嵌套会变成 45 个格子，没用）。</p>
+    </div>
+
+    <details>
+      <summary>一级：三个主体，各自的骨架</summary>
+      <div class="ans">
+        <table>
+          <thead><tr><th>主体</th><th>它的骨架</th><th>它的工具箱</th></tr></thead>
+          <tbody>
+            <tr><td><b>人</b><br>（买家）</td><td><b>AARRR 漏斗</b>：拉新 → 激活 → 留存 → 变现 → 推荐</td><td>需求洞察（调研/访谈/评论分析）、分层（RFM、新老客、价格敏感度）</td></tr>
+            <tr><td><b>货</b><br>（商品+商家）</td><td>选品 → 价格带 → 成本 → 库存 → 供给</td><td>品类结构、SKU 规划、动销/周转/滞销</td></tr>
+            <tr><td><b>场</b><br>（平台/场景）</td><td>流量 → 坑位 → 机制 → 规则</td><td>推荐位、百亿补贴/秒杀、赛马算法、服务分、SLA</td></tr>
+          </tbody>
+        </table>
+        <p class="tag">AARRR 不是凌驾一切的主线，它是<b>「人」这条线的骨架</b>——用户的旅程本来就是拉新到推荐。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>三组关系（每组都是双向的）</summary>
+      <div class="ans">
+        <table>
+          <thead><tr><th>关系</th><th>方向一</th><th>方向二</th><th>本质</th></tr></thead>
+          <tbody>
+            <tr><td><b>人货</b></td><td>人有没有这个需求</td><td>货的价格/品质能不能满足</td><td>供需匹配</td></tr>
+            <tr><td><b>人场</b></td><td>平台能不能把人引来</td><td>人在场里愿不愿意停留</td><td>触达与体验</td></tr>
+            <tr><td><b>货场</b></td><td>场给货多少资源</td><td>货给场多少产出</td><td>效率与配给</td></tr>
+          </tbody>
+        </table>
+        <p><b>「双向」的实战价值</b>：CVR 掉了，立刻要问——是用户不想要了（需求侧），还是货不行/贵了/主图差了（供给侧）？<b>问对方向，才不会乱改。</b></p>
+      </div>
+    </details>
+
+    <details>
+      <summary>二级：三个阶段，是三种问法（定 / 调 / 算）</summary>
+      <div class="ans">
+        <p>阶段不是换项目，是<b>换视角</b>。同一件事，三个阶段三种问法：</p>
+        <table>
+          <thead><tr><th>对象</th><th>事前（定）</th><th>事中（调）</th><th>事后（算）</th></tr></thead>
+          <tbody>
+            <tr><td>库存</td><td>备多少</td><td>消得多快、会不会断</td><td>剩多少、周转几天、滞销多少</td></tr>
+            <tr><td>价格</td><td>定多少</td><td>要不要临时调</td><td>实际成交价、毛利多少</td></tr>
+            <tr><td>流量</td><td>规划多少</td><td>分给哪个货</td><td>值不值（ROI）</td></tr>
+            <tr><td>人</td><td>打哪些人群</td><td>进没进来、买没买</td><td>还买不买（复购）</td></tr>
+          </tbody>
+        </table>
+        <p class="tag">锚点是「流量爆发 / 交易发生」那一刻。开售前做准备，爆发时做调优，结束后做复盘。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary>三级：异常归因——先分内外</summary>
+      <div class="ans">
+        <table>
+          <thead><tr><th>类型</th><th>包含</th></tr></thead>
+          <tbody>
+            <tr><td><b>外部</b><br>（调目标）</td><td>宏观（消费环境、季节）、供应链（涨价、产能、物流）、竞争对手（降价、上新、抢流量）、平台侧（算法调整、规则变化）</td></tr>
+            <tr><td><b>内部</b><br>（改动作）</td><td>预测偏差、选品失误、定价没竞争力、执行不到位、库存断货或积压、跨部门协同</td></tr>
+          </tbody>
+        </table>
+        <p class="warn">规则：<b>外部异动 → 调整预期和节奏；内部问题 → 改动作和流程。</b>这一刀切下去，归因永远不会乱。</p>
+      </div>
+    </details>
+  </section>
+
+  <section id="five">
+    <h2>五、五步排查法（拿 CVR 下降当例子）</h2>
+    <div class="card">
+      <p class="lead"><b>第 1 步 · 看指标，定位关系</b><br>大促 CVR 掉 → 这是<b>人货</b>的问题（人进来了，但不买）。</p>
+      <p class="lead" style="margin-top:10px"><b>第 2 步 · 分两侧，看是需求还是供给</b><br>需求侧（人）：人群打偏了吗？大促拉来的是薅羊毛的，还是目标用户？<br>供给侧（货）：价格有竞争力吗？主图行不行？SKU 全不全？库存够不够？评价拉不拉？</p>
+      <p class="lead" style="margin-top:10px"><b>第 3 步 · 顺漏斗，找卡在哪一跳</b><br>曝光 → <b>CTR</b> → 进店 → 加购 → <b>CVR</b> → 复购<br>加购高但下单低 = 卡在最后一跳；加购也低 = 前面没打动；CTR 也低 = 压根没吸引力。</p>
+      <p class="lead" style="margin-top:10px"><b>第 4 步 · 往前推，归因到阶段</b><br>如果是断货、缺 SKU → 是<b>事前</b>的预测和备货问题；如果是价格没竞争力 → 是<b>事前</b>的定价问题。</p>
+      <p class="lead" style="margin-top:10px"><b>第 5 步 · 别跨阶段乱推因果</b><br><b>CVR 低不等于复购低或客诉高</b>，前后不必然相关。每个阶段的指标单独看。</p>
+      <p class="key">背诵版：「先定位指标到关系，再分需求侧供给侧，再顺漏斗找卡点，再往前归因到阶段，最后别跨阶段推因果。」</p>
+    </div>
+  </section>
+
   <section id="dirs">
-    <h2>三、岗位认知：管培生是「先轮岗、再双选定岗」</h2>
+    <h2>六、岗位认知：管培生是「先轮岗、再双选定岗」</h2>
     <div class="card" style="padding:0; overflow:hidden">
       <table>
         <thead><tr><th>方向</th><th>干什么</th><th>你的对口点</th></tr></thead>
@@ -173,7 +320,7 @@
   </section>
 
   <section id="map">
-    <h2>四、场景地图：招、扶、谈、冲、盯、清</h2>
+    <h2>七、场景地图：招、扶、谈、冲、盯、清</h2>
     <details>
       <summary>① 招（招商）</summary>
       <div class="ans"><p>干什么：找供给。看哪个品类的哪个<b>价格带缺货</b>，去对应的<b>产业带</b>把工厂招进来。</p><p class="tag">你对口：你能判断一个工厂「能不能做到这个价、能不能供得上量」。</p></div>
@@ -201,7 +348,7 @@
   </section>
 
   <section id="trans">
-    <h2>五、简历翻译表（面试官问细节时用）</h2>
+    <h2>八、简历翻译表（面试官问细节时用）</h2>
     <div class="card" style="padding:0; overflow:hidden">
       <table>
         <thead><tr><th>你实际做的</th><th>电商运营里的说法</th></tr></thead>
@@ -220,7 +367,7 @@
   </section>
 
   <section id="platform">
-    <h2>六、平台理解（这是你的王牌）</h2>
+    <h2>九、平台理解</h2>
 
     <details>
       <summary>赛马机制：拼多多流量分配的底层逻辑</summary>
@@ -257,7 +404,7 @@
         <p><b>商家运营岗先报这个</b>：GMV = <b>商家数 × 单个商家的产出</b></p>
         <ul>
           <li>商家数上去 = 招商</li>
-          <li>单商家产出上去 = 培育（给流量、优化商品、带活动）</li>
+          <li>单商家产出上去 = 培育</li>
           <li>低效商家清掉 = 淘汰治理</li>
         </ul>
         <p>再补一句：「单商家产出可以进一步拆成 <b>UV × 转化率 × 客单价</b>」——两个层次都说到，面试官会知道你分得清平台视角和用户视角。</p>
@@ -266,34 +413,23 @@
   </section>
 
   <section id="r1">
-    <h2>七、一面题卡（业务组长 · 20-30 分钟）</h2>
-
+    <h2>十、一面题卡（业务组长 · 20-30 分钟）</h2>
     <details>
       <summary>自我介绍</summary>
       <div class="ans"><p>用上面 60 秒版，掐表练到 60 秒内，别超时。</p></div>
     </details>
-
     <details>
-      <summary>简历深挖：具体做了什么、数据怎么清洗的、跨部门怎么推进</summary>
-      <div class="ans">
-        <p>主推 <b>苏小配</b>（30+ 场活动、ROI 100% 达标）和 <b>联通</b>（10 天拉新 700+），因为最贴运营。</p>
-        <p>美的那段用来证明：数据能力 + 流程改善 + 抗压。每个数字都要说得清口径。</p>
-      </div>
+      <summary>简历深挖：具体做了什么、数据怎么清洗、跨部门怎么推进</summary>
+      <div class="ans"><p>主推 <b>苏小配</b>（30+ 场活动、ROI 100%）和 <b>联通</b>（10 天拉新 700+），最贴运营。美的那段证明数据能力 + 流程改善 + 抗压。<b>每个数字都要说得清口径。</b></p></div>
     </details>
-
     <details>
       <summary>为什么选电商运营？为什么投拼多多？</summary>
-      <div class="ans">
-        <p>电商是最可量化、迭代最快的行业；拼多多是货找人的推荐流平台，离「用数据做增长」最近。</p>
-        <p>而且我是重度用户，对它的商品卡设计和时效策略有自己的观察（见上）。</p>
-      </div>
+      <div class="ans"><p>电商是最可量化、迭代最快的行业；拼多多是货找人的推荐流平台，离「用数据做增长」最近。而且我是重度用户，对它的商品卡设计和时效策略有自己的观察。</p></div>
     </details>
-
     <details>
       <summary>你平时用拼多多吗？说说你的体验</summary>
-      <div class="ans"><p>用「商品卡三要素 + 先用后付 = 拆掉交易摩擦」这套讲，再补一句时效。这是你最真实、最稀缺的一张牌。</p></div>
+      <div class="ans"><p>用「商品卡三要素 + 先用后付 = 拆掉交易摩擦」这套讲，再补一句时效战。<b>这是你最真实、最稀缺的一张牌。</b></p></div>
     </details>
-
     <details>
       <summary>你没做过电商/商家运营，凭什么能做？</summary>
       <div class="ans">
@@ -301,7 +437,6 @@
         <p>而且我懂商家的成本结构，这在跟商家谈价格、谈投放的时候是直接能用的。缺的是平台规则，这个我可以快速补。」</p>
       </div>
     </details>
-
     <details>
       <summary>能接受 11-11-6 吗？</summary>
       <div class="ans"><p>别干巴巴说「能接受」。结合经历：「我在美的做生产计划时，跟产线、跟异常，本身就是高频节奏；我更看重在快节奏里能拿到结果。我是想清楚了才来的。」</p></div>
@@ -309,46 +444,31 @@
   </section>
 
   <section id="r2">
-    <h2>八、二面题卡（业务主管 · 场景题为主）</h2>
-
+    <h2>十一、二面题卡（业务主管 · 场景题为主）</h2>
     <details>
       <summary>你负责的品类 GMV 突然下降 20%，怎么排查？</summary>
-      <div class="ans">
-        <p>按「流量 × 转化 × 客单价」拆，先定位掉在哪一段：</p>
-        <ul>
-          <li>流量掉 → 查搜索/推荐权重、活动是否到期、竞品是否在抢流量</li>
-          <li>转化掉 → 查价格、主图、评价、库存</li>
-          <li>客单掉 → 查价格带结构、优惠门槛</li>
-        </ul>
-        <p>再往上归因：是某个头部商家掉了，还是整个价格带缺供给——<b>结构性问题要招商补供给，运营性问题要培育。</b></p>
-      </div>
+      <div class="ans"><p>直接上<b>五步排查法</b>：① 定位到指标和关系；② 分需求侧/供给侧；③ 顺漏斗找卡点；④ 往前归因到阶段；⑤ 别跨阶段推因果。</p></div>
     </details>
-
     <details>
       <summary>你怎么给用户分层？用到下沉市场第一步调什么</summary>
       <div class="ans"><p>RFM（最近消费/频次/金额）+ 新老客区分。下沉市场第一步：<b>更侧重价格敏感度</b>——提高优惠券/首购礼金权重，把目标从「情怀召回」换成「性价比留存」。</p></div>
     </details>
-
     <details>
       <summary>对接的商家态度不好、不信任平台，你怎么沟通？</summary>
       <div class="ans"><p>先听他的痛点（是不是利润薄、流量拿不到）→ 再摆平台能给的价值（流量扶持、活动资源位）→ 用一个小范围的低价测试或数据案例建立共识。</p><p>核心：<b>不是压他，是帮他算清楚这笔生意值不值得做。</b></p></div>
     </details>
-
     <details>
       <summary>让你策划一场大促活动，你怎么做？</summary>
       <div class="ans"><p>定目标（拉新/冲 GMV）→ 选人群 → 定货盘（爆款 + 引流款 + 利润款）→ 定机制（拼团/百亿补贴/券）→ 定节奏（预热-爆发-返场）→ 数据监控与复盘。<b>讲闭环，比讲创意更有说服力。</b></p></div>
     </details>
-
     <details>
       <summary>拼多多和淘宝、京东、抖音的运营差异是什么？</summary>
-      <div class="ans"><p>见「平台理解」那节。一句话：<b>淘宝是店铺资产 + 人找货，拼多多是单品 + 货找人 + 赛马分配流量，抖音是内容激发需求。</b></p></div>
+      <div class="ans"><p>一句话：<b>淘宝是店铺资产 + 人找货，拼多多是单品 + 货找人 + 赛马分配流量，抖音是内容激发需求。</b></p></div>
     </details>
-
     <details>
       <summary>了解轮岗机制吗？可以接受吗？</summary>
       <div class="ans"><p>接受。并补一句：「而且我四个方向都有过接触，所以不管定到哪个都不是从零开始。」</p></div>
     </details>
-
     <details>
       <summary>实习时遇到过最紧急的任务？怎么扛下来的？</summary>
       <div class="ans"><p>用美的的素材：多任务并行时按重要紧急排序 + 用工具自动化把重复劳动干掉（加单工具 2 小时 → 20 分钟）。<b>先止血，再根治。</b></p></div>
@@ -356,44 +476,63 @@
   </section>
 
   <section id="r3">
-    <h2>九、三面题卡（HRBP · 查户口 + 稳定性）</h2>
-
+    <h2>十二、三面题卡（HRBP · 查户口 + 稳定性）</h2>
     <details>
       <summary>籍贯、Base、长期定居、父母职业、是否独生子女、家人是否支持去上海</summary>
       <div class="ans"><p>【如实】+ 统一口径：家里支持，我愿意在上海长期发展、认真考虑定居。</p></div>
     </details>
-
     <details>
       <summary>秋招进度怎么样？手里有其他 offer 吗？更倾向哪个？</summary>
       <div class="ans"><p>说「投得不多、很聚焦，主要是平台型和供应链/运营方向」。说实话、不隐瞒，但把落点放在「我更想确认拼多多这个方向」。</p></div>
     </details>
-
     <details>
       <summary>期望薪资 / 对薪资结构有什么想法</summary>
       <div class="ans"><p class="warn">别先报数。</p><p>反问薪资结构和定级，说「符合市场水平即可，我更看重成长空间」。要报就给事先查过的区间。</p></div>
     </details>
-
     <details>
       <summary>3 年小目标：你希望成为什么样的运营人</summary>
       <div class="ans"><p>前 1 年把基本功打扎实，跑通一个品类/行业的完整链路；第 2-3 年能独立负责一个行业方向，成为懂商家、懂数据、懂货的运营。<b>具体、谦逊，别画大饼。</b></p></div>
     </details>
-
     <details>
       <summary>能否接受 11-11-6？怎么看互联网的高强度？</summary>
-      <div class="ans"><p>干脆接受 + 结合经历：「我理解这个行业的节奏，也经历过项目冲刺期。我更能从结果和快速成长里获得成就感。」不要在 HR 面改口，要和前面一致。</p></div>
+      <div class="ans"><p>干脆接受 + 结合经历：「我理解这个行业的节奏，也经历过项目冲刺期。我更能从结果和快速成长里获得成就感。」<b>不要在 HR 面改口，要和前面一致。</b></p></div>
     </details>
   </section>
 
+  <section id="kpi">
+    <h2>十三、指标速查表</h2>
+    <div class="card" style="padding:0; overflow:hidden">
+      <table>
+        <thead><tr><th>指标</th><th>公式 / 含义</th><th>回答什么问题</th></tr></thead>
+        <tbody>
+          <tr><td><b>UV</b></td><td>独立访客数</td><td>有多少人来了</td></tr>
+          <tr><td><b>CTR</b> 点击率</td><td>点击数 / 曝光数</td><td>人<b>愿不愿意点进来</b>（人场）</td></tr>
+          <tr><td><b>CVR</b> 转化率</td><td>下单数 / 进店数</td><td>人<b>进来了，为什么不买</b>（人货）</td></tr>
+          <tr><td><b>AOV</b> 客单价</td><td>GMV / 下单数</td><td>买得贵不贵</td></tr>
+          <tr><td><b>复购率</b></td><td>复购人数 / 购买人数</td><td>买完还买不买（事后）</td></tr>
+          <tr><td><b>退款率</b></td><td>退款单 / 总单</td><td>买了后满不满意</td></tr>
+          <tr><td><b>动销率</b></td><td>有销量的 SKU / 总 SKU</td><td>货卖不卖得动</td></tr>
+          <tr><td><b>周转天数</b></td><td>库存 / 日均出货</td><td>货压了多久</td></tr>
+          <tr><td><b>单坑产出</b></td><td>该资源位带来的 GMV</td><td>位置效率高不高（货场）</td></tr>
+          <tr><td><b>CAC</b></td><td>获客成本</td><td>拉一个新客要花多少钱</td></tr>
+          <tr><td><b>Take rate</b></td><td>平台从交易里抽走的比例</td><td>平台的变现率</td></tr>
+          <tr><td><b>SLA</b></td><td>服务承诺（如 48 小时发货）</td><td>履约达没达标</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
   <section id="tips">
-    <h2>十、避坑与提醒</h2>
+    <h2>十四、避坑与提醒</h2>
     <div class="card">
       <ul style="margin:0; padding-left:20px">
-        <li><b>别用「这不复杂」的语气。</b>换成「我擅长把复杂的事做简单」——同一个意思，方向从看轻变成加分。</li>
-        <li><b>三面后可能「泡池子」1-3 个月。</b>千万别为了等拼多多放弃别的机会，拿到手的才算数。</li>
-        <li><b>一天三轮，考的是体力和状态。</b>早点睡，吃好饭，稳住节奏。</li>
-        <li><b>先结论后细节</b>，每题控制在 2-3 分钟，别啰嗦。</li>
+        <li><b>别用「这不复杂」的语气。</b>换成「我擅长把复杂的事做简单」。</li>
+        <li><b>商业模型别讲成课。</b>点到为止，最后落回动作：「所以我做商家运营的目标就是帮商家把 GMV 做起来，他自然会投更多广告。」</li>
+        <li><b>三面后可能「泡池子」1-3 个月。</b>别为了等拼多多放弃别的机会。</li>
+        <li><b>一天三轮，考的是体力和状态。</b>早点睡，吃好饭。</li>
+        <li><b>先结论后细节</b>，每题 2-3 分钟，别啰嗦。</li>
         <li><b>客服轮岗 / 高压 / 轮岗</b>这类意愿题，表态要干脆，犹豫就扣分。</li>
-        <li><b>简历上的每个数字都要能说清口径</b>：700+、100% ROI、2304 行、2 小时→20 分钟。</li>
+        <li><b>简历上每个数字都要能说清口径</b>：700+、100% ROI、2304 行、2 小时→20 分钟。</li>
       </ul>
     </div>
   </section>
@@ -402,7 +541,7 @@
     <h2>附：京东物流运营 · 二面速查</h2>
     <div class="card">
       <h3>三个动作（处理到岗时间）</h3>
-      <p class="lead">① 给锚点：我在美的的实习签到 12 月底。<br>② 问需求：用人部门希望的到岗时间大概是什么时候？<br>③ 给方案：如果能等 → 12 月底交接完到岗；如果要提前 → 我可以协调，但需要留交接时间。</p>
+      <p class="lead">① 给锚点：我在美的的实习签到 12 月底。<br>② 问需求：用人部门希望的到岗时间大概是什么时候？<br>③ 给方案：能等 → 12 月底交接完到岗；要提前 → 我可以协调，但需要留交接时间。</p>
       <p class="key">别说「我尽可能不毁约」（听起来像可能放鸽子），要说「<b>我会把交接做好，有始有终</b>」。</p>
     </div>
     <details>
@@ -422,7 +561,7 @@
       <div class="ans">
         <p><b>爆仓</b>：提前预测单量 → 备人备场地备设备 → 峰值动态调配 → 异常预案（跨仓调拨、临时场地）→ 事后复盘。</p>
         <p><b>库存不准</b>：先找源头是哪个环节漏扫错扫（收货/上架/拣货/退货）→ 规范扫码 + 系统校验兜底 → 异常预警。</p>
-        <p class="warn">可以带一句你的判断：系统难不难不是关键，<b>难的是数据的实时性和准确性</b>——任何环节扫错，下游全歪。</p>
+        <p class="warn">带一句你的判断：<b>难的不是系统，是数据的实时性和准确性</b>——任何环节扫错，下游全歪。</p>
       </div>
     </details>
     <details>
@@ -435,7 +574,7 @@
     </details>
   </section>
 
-  <footer>仅供个人面试备考使用 · 内容基于公开面经与个人经历整理</footer>
+  <footer>仅供个人面试备考使用 · 内容基于公开面经与个人思考整理</footer>
 </div>
 
 <button class="backtop" id="backtop" aria-label="回到顶部">↑</button>
